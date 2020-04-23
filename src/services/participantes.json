@@ -1,0 +1,142 @@
+[
+	{
+		"name": "Diana Regina",
+		"email": "dianaregina22@outlook.com.br",
+		"present": true,
+		"receiveCertificate": true,
+		"course": "Bootcamp React"
+	}, 
+	{
+		"name": "Chaiana Hermes",
+		"email": "chaiana_hermes@yahoo.com.br",
+		"present": false,
+		"receiveCertificate": false,
+		"course": "Bootcamp React"
+	}, 
+	{
+		"name": "Rose Ahakawa",
+		"email": "rose.oyakawa@gmail.com",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "Bootcamp React"
+	}, 
+	{
+		"name": "Grasiele Kroger",
+		"email": "gelbundschwarz@gmail.com",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "Bootcamp React"
+	}, 
+	{
+		"name": "Claudia Caroline Arruda Policarpo",
+		"email": "claudia.policarpo89@gmail.com",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "React Navite"
+	}, 
+	{
+		"name": "Diana Coelho",
+		"email": "coelhodiana04@gmail.com",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "Bootcamp React"
+	}
+	, 
+	{
+		"name": "Larissa Oliveira",
+		"email": "larioli.me@gmail.com",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "Bootcamp React"
+	}
+	, 
+	{
+		"name": "Ariane Sousa",
+		"email": "ariane.sousa011@gmail.com",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "Bootcamp React"
+	}
+	, 
+	{
+		"name": "Anna Carolina Inhasz Aureliano",
+		"email": "anna.inhasz@gmail.com",
+		"present": true,
+		"receiveCertificate": true,
+		"course": "Bootcamp React"
+	}
+	, 
+	{
+		"name": "Alessandra Nastassja",
+		"email": "alessandra.nastassja@hotmail.com",
+		"present": true,
+		"receiveCertificate": true,
+		"course": "Bootcamp React"
+	}
+	, 
+	{
+		"name": "Isabella Soares de Lima",
+		"email": "isabella.soares.28@gmail.com",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "Bootcamp React"
+	}, 
+	{
+		"name": "Mariana Tancredi",
+		"email": "matancredi@hotmail.com",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "Bootcamp React"
+	}, 
+	{
+		"name": "Ana Paula Mak",
+		"email": "anapaulamak@gmail.com",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "Bootcamp React"
+	}
+	, 
+	{
+		"name": "Mariana Tancredi",
+		"email": "alicia@outlook.com.br",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "Bootcamp React"
+	}, 
+	{
+		"name": "Leticia Campos",
+		"email": "leehcamposs@gmail.com",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "Bootcamp React"
+	}, 
+	{
+		"name": "Fernanda R. A.",
+		"email": "fernandaramos.a@outlook.com",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "Bootcamp React"
+	}, 
+	{
+		"name": "Angela Mutsumi",
+		"email": "angelamutsumi@gmail.com",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "Bootcamp React"
+	}, 
+	{
+		"name": "Olívia Resende",
+		"email": "olivinharesende@hotmail.com",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "Bootcamp React"
+	},
+	{
+		"name": "Dayana Maia",
+		"email": "dayrmaia@gmail.com",
+		"present": true,
+		"receiveCertificate": false,
+		"course": "Bootcamp React"
+	}
+]
+

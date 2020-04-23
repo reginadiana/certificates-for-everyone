@@ -1,0 +1,25 @@
+.h3-success {
+    text-align: center;
+    font-family: 'Releway', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    color: black;
+    display: block;
+    margin: 20px auto;
+    margin-top: 15%;
+    position: relative;
+}
+
+.span-success {
+    color: #c6255a;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+    .h3-success{
+        font-size: 20px;
+    }
+    .span-success {
+        font-size: 20px;
+    }
+}

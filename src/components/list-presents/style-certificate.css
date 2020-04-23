@@ -1,0 +1,151 @@
+.certificate-background {
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+	font-size: 1.5vw;
+
+	background: url('../../assets/wallpaper-certificate.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 5%;
+	margin-bottom: 10%;
+}
+
+/*Logo*/
+.img-logo-certificate {
+	display: flex;
+	margin-left: 40%;
+	margin-top: 10%;
+	width: 15%;
+}
+
+/*Estrelas*/
+.img-stars {
+	display: flex;
+	margin-left: 45%;
+	width: 70px;
+	height: 15px;
+} 
+
+/*Texto*/
+.p-certificate {
+	margin-left: 5%;
+	margin-top: 5%;
+	width: 90%;
+}
+
+/*Assinatura Digital*/
+.digitalSignature {
+	width: 80px;
+	height: 80px;
+}
+
+hr {
+	width: 35%;
+	color: black;
+	margin-top: 0%;
+	margin-left: 30%;
+	background-color: brown;
+}
+
+/*Colocando as informações principais do certificado em negrito*/
+.info-certificate {
+	font-weight: 400;
+	color: black;
+}
+
+/*Nome do organizador do evento*/
+.p-2-certificate {
+	margin-left: 32%;
+	margin-bottom: 10%;
+
+	width: 30%;
+}
+
+/*Botão para voltar a lista de participantes*/
+.button-voltar {
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 3%;
+
+	background-color: #00b7d2;
+	border-color: #00b7d2;
+	color: white;
+}
+
+.button-voltar:hover {
+	background-color: white;
+	border-color: #00b7d2;
+	color: #00b7d2;
+	transition: 0.5s;
+}
+
+.button-email {
+
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -5%;
+	margin-bottom: 3%;
+
+	background-color: #50c878;
+	border-color: #50c878;
+	color: white;
+}
+
+.button-email:hover {
+	background-color: white;
+	border-color: #50c878;
+	color: #50c878;
+	transition: 0.5s;
+}
+
+@media screen and (max-width: 700px) {
+	.div-buttons { 
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.img-logo-certificate {
+		margin-top: 10%;
+		margin-left: 46.5%;
+		width: 10%;
+		height: 10%;
+	}
+
+	.img-stars {
+		width: 35px;
+		height: 7.5px ;
+		margin-left: 47%;
+	}
+
+	/*Assinatura Digital*/
+	.digitalSignature {
+		width: 20px;
+		height: 20px;
+	}
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px){
+	.img-logo-certificate {
+		margin-top: 5%;
+		margin-left: 40%;
+	}
+
+	.button-pdf {
+		background-color: pink;
+	}
+
+	/*Assinatura Digital*/
+	.digitalSignature {
+		width: 40px;
+		height: 40px;
+	}
+}
