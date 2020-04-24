@@ -42,7 +42,7 @@
 .buttom-send-to-all:hover {
 	border-color: #98fb98;
     background-color: #98fb98;
-    color: #ffffff;
+    color: black;
 	box-shadow: 4px 4px 8px gray;
 }
 
@@ -50,7 +50,7 @@
 .buttom-cancel {
 	border-color: #fa7f72;
     background-color: #fa7f72;
-    color: #ffffff;
+    color: black;
     width: 15%;
     margin-left: 2%;
     margin-bottom: 2%;
@@ -59,7 +59,7 @@
 .buttom-cancel:hover {
 	border-color: #fa7f72;
     background-color: #fa7f72;
-    color: #ffffff;
+    color: black;
 	box-shadow: 4px 4px 8px gray;
 }
 
