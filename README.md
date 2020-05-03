@@ -1,108 +1,116 @@
-## Create-React-App-Lambda
+<h1 align="center"> Certificates for Everyone </h1>
 
-This project is a reference demo showing you how to use [Create React App v3](https://github.com/facebookincubator/create-react-app) and [netlify-lambda v1](https://github.com/netlify/netlify-lambda) together in a [Netlify Dev](https://www.netlify.com/docs/cli/?utm_source=github&utm_medium=swyx-CRAL&utm_campaign=devex#netlify-dev-beta) workflow. You can clone this and immediately be productive with a React app with serverless Netlify Functions in the same repo. Alternatively you can deploy straight to Netlify with this one-click Deploy:
+> Status do Projeto: Concluido 
 
+## Descrição do projeto
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg?utm_source=github&utm_medium=swyx-CRAL&utm_campaign=devex)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify/create-react-app-lambda&utm_source=github&utm_medium=swyx-CRAL&utm_campaign=devex)
+<p align="justify">
+Desenvolver uma plataforma capaz de gerar certificados em PDF de eventos e cursos para enviá-los por e-mail aos participantes.
+</p>
 
-> ⚠️NOTE: You may not need this project at all. [Netlify Dev](https://github.com/netlify/netlify-dev-plugin) works with `create-react-app` out of the box! Only use `netlify-lambda` if you need a build step for your functions, eg if you want to use Babel or TypeScript ([see its README for details](https://github.com/netlify/netlify-lambda/blob/master/README.md#netlify-lambda)).
+## O que a plataforma é capaz de fazer 
 
-## Project Setup
+- Gerar PDF do certificado com as informações preenchidas no formulário para cada participantes para envio de e-mail 
 
-**Source**: The main addition to base Create-React-App is a new folder: `src/lambda`. This folder is specified and can be changed in the `package.json` script: `"build:lambda": "netlify-lambda build src/lambda"`.
+- Check-list de participantes, permitindo selecionar quem irá receber os certificados 
 
-**Dist**: Each JavaScript file in there will be built for Netlify Function deployment in `/built-lambda`, specified in [`netlify.toml`](https://www.netlify.com/docs/netlify-toml-reference/?utm_source=github&utm_medium=swyx-CRAL&utm_campaign=devex).
+- Permite que o organizador do evento escreva sua assinatura digital dentro da plataforma
 
-As an example, we've included a small `src/lambda/hello.js` function, which will be deployed to `/.netlify/functions/hello`. We've also included an async lambda example using async/await syntax in `async-dadjoke.js`.
+- Oferece layout responsivo 
 
-## Video
+- Cadastrar organizadores 
 
-Learn how to set this up yourself (and why everything is the way it is) from scratch in a video: https://www.youtube.com/watch?v=3ldSM98nCHI
+- Cadastrar eventos 
 
-## Babel/webpack compilation
+- Cadastrar participantes para cada evento
 
-All functions (inside `src/lambda`) are compiled with webpack using Babel, so you can use modern JavaScript, import npm modules, etc., without any extra setup.
+## Deploy da Aplicação com Netlify: 
 
-## Local Development
+> https://certificates-for-everyone-womakerscode.netlify.app/
 
-```bash
-## prep steps for first time users
-npm i -g netlify-cli # Make sure you have the [Netlify CLI](https://github.com/netlify/cli) installed
-git clone https://github.com/netlify/create-react-app-lambda ## clone this repo
-cd create-react-app-lambda ## change into this repo
-yarn # install all dependencies
+## Como rodar a aplicação 
 
-## done every time you start up this project
-ntl dev ## nice shortcut for `netlify dev`, starts up create-react-app AND a local Node.js server for your Netlify functions
+No terminal, clone o projeto: 
+
+```
+git clone https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator
 ```
 
-This fires up [Netlify Dev](https://www.netlify.com/docs/cli/?utm_source=github&utm_medium=swyx-CRAL&utm_campaign=devex#netlify-dev-beta), which:
+Entre na pasta do projeto:  
 
-- Detects that you are running a `create-react-app` project and runs the npm script that contains `react-scripts start`, which in this project is the `start` script
-- Detects that you use `netlify-lambda` as a [function builder](https://github.com/netlify/netlify-dev-plugin/#function-builders-function-builder-detection-and-relationship-with-netlify-lambda), and runs the npm script that contains `netlify-lambda build`, which in this project is the `build:lambda` script.
-
-You can view the project locally via Netlify Dev, via `localhost:8888`.
-
-Each function will be available at the same port as well:
-
-- `http://localhost:8888/.netlify/functions/hello` and 
-- `http://localhost:8888/.netlify/functions/async-dadjoke`
-
-## Deployment
-
-During deployment, this project is configured, inside `netlify.toml` to run the build `command`: `yarn build`.
-
-`yarn build` corresponds to the npm script `build`, which uses `npm-run-all` (aka `run-p`) to concurrently run `"build:app"` (aka `react-scripts build`) and `build:lambda` (aka `netlify-lambda build src/lambda`).
-
-## Typescript
-
-<details>
-  <summary>
-    <b id="typescript">Click for instructions</b>
-  </summary>
-
-You can use Typescript in both your frontend React code (with `react-scripts` v2.1+) and your serverless functions (with `netlify-lambda` v1.1+). Follow these instructions:
-
-1. `yarn add -D typescript @types/node @types/react @types/react-dom @babel/preset-typescript @types/aws-lambda`
-2. convert `src/lambda/hello.js` to `src/lambda/hello.ts`
-3. use types in your event handler:
-
-```ts
-import { Handler, Context, Callback, APIGatewayEvent } from 'aws-lambda'
-
-interface HelloResponse {
-  statusCode: number
-  body: string
-}
-
-const handler: Handler = (event: APIGatewayEvent, context: Context, callback: Callback) => {
-  const params = event.queryStringParameters
-  const response: HelloResponse = {
-    statusCode: 200,
-    body: JSON.stringify({
-      msg: `Hello world ${Math.floor(Math.random() * 10)}`,
-      params,
-    }),
-  }
-
-  callback(undefined, response)
-}
-
-export { handler }
+```
+cd certificate-generator
 ```
 
-rerun and see it work!
+Instale as dependecias:
 
-You are free to set up your `tsconfig.json` and `tslint` as you see fit.
+```
+yarn install
+```
 
-</details>
+Execute a aplicação:
 
-**If you want to try working in Typescript on the client and lambda side**: There are a bunch of small setup details to get right. Check https://github.com/sw-yx/create-react-app-lambda-typescript for a working starter.
+```
+yarn start
+```
 
-## Routing and authentication with Netlify Identity
+Pronto, agora é possível acessar a aplicação a partir da rota http://localhost:3000/ 
 
-For a full demo of routing and authentication, check this branch: https://github.com/netlify/create-react-app-lambda/pull/18 This example will not be maintained but may be helpful.
+## JSON 
 
-## Service Worker
+A nossa simulação de banco de dados foi feita com JSON. Foram separados um para [usuarios](https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator/blob/DianaRegina/certificate/src/services/users.json), [participantes](https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator/blob/DianaRegina/certificate/src/services/participantes.json) e [eventos](https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator/blob/DianaRegina/certificate/src/services/events.json):
 
-`create-react-app`'s default service worker (in `src/index.js`) does not work with lambda functions out of the box. It prevents calling the function and returns the app itself instead ([Read more](https://github.com/facebook/create-react-app/issues/2237#issuecomment-302693219)). To solve this you have to eject and enhance the service worker configuration in the webpack config. Whitelist the path of your lambda function and you are good to go.
+### Usuário: 
+
+|name|email|password|token|avatar|
+| -------- |-------- |-------- |-------- |-------- |
+|Lais Lima|laislima98@hotmail.com|lais123|true|https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS9-U_HbQAipum9lWln3APcBIwng7T46hdBA42EJv8Hf6Z4fDT3&usqp=CAU|
+
+### Evento: 
+
+|user|company|course|startDate|finishDate|workload|logo|
+| -------- |-------- |-------- |-------- |-------- |-------- |-------- |
+|Lais Lima|WomakersCode|Bootcamp React|01/02/2020|28/03/2020|56|https://miro.medium.com/max/478/1*jriufqYKgJTW4DKrBizU5w.png|https://upload.wikimedia.org/wikipedia/commons/7/7f/Assinatura_Jos%C3%A9_Saramago.png|
+
+### Participante: 
+
+|name|email|present|receiveCertificate|course|
+| -------- |-------- |-------- |-------- |-------- |
+|Chaiana Hermes|chaiana_hermes@yahoo.com.br|true|false|Bootcamp React|
+
+## Linguagens, dependencias e libs utilizadas :books:
+
+- [React](https://pt-br.reactjs.org/docs/create-a-new-react-app.html)
+- [React PDF](https://react-pdf.org/)
+- [React Router](https://reacttraining.com/react-router/web/guides/quick-start)
+
+Framework para layouts prontos:
+- [AntDesign](https://ant.design/docs/react/introduce) 
+
+Autenticação com Google
+- [Login com Google](https://www.npmjs.com/package/react-google-login)
+
+Para mandar PDF por email
+- [jspdf](https://www.npmjs.com/package/jspdf) 
+
+Para inserir HTML no corpo do email
+- [html2canvas](https://www.npmjs.com/package/html2canvas)
+
+Para desenvolver a assinatura digital:
+
+- [Reactjs-Popup](https://react-popup.elazizi.com/getting-started/)
+- [react-signature-canvas](https://www.npmjs.com/package/react-signature-canvas)
+
+Permite visualizar uma animação enquanto o usuário espera o e-mail ser enviado:
+- [React-Spinkit](https://github.com/KyleAMathews/react-spinkit)
+
+## Dependência externa 
+[Server Mailjet](https://github.com/beebones/server-mailjet) - Back-end feito em **Golang** utiizado para consumir api **mailjet** e enviar os emails com o certificado.
+<hr/>
+
+## Desenvolvedoras
+
+- [Bee Bones](https://github.com/beebones)
+- [Chaiana Hermes](https://github.com/chaihermes)
+- [Diana Regina](https://github.com/Diana-ops)
+- [Rose Ahakawa](https://github.com/ahakawa)
