@@ -75,13 +75,13 @@ A nossa simulação de banco de dados foi feita com JSON. Foram separados um par
 ### Evento: 
 
 |user|company|course|startDate|finishDate|workload|logo|
-| -------- |-------- |-------- |-------- |-------- |-------- |-------- |
+| -------- | -------- | -------- | -------- |-------- | -------- | -------- |
 |Lais Lima|WomakersCode|Bootcamp React|01/02/2020|28/03/2020|56|https://miro.medium.com/max/478/1*jriufqYKgJTW4DKrBizU5w.png|https://upload.wikimedia.org/wikipedia/commons/7/7f/Assinatura_Jos%C3%A9_Saramago.png|
 
 ### Participante: 
 
 |name|email|present|receiveCertificate|course|
-| -------- |-------- |-------- |-------- |-------- |
+| -------- | -------- | -------- | -------- | -------- |
 |Chaiana Hermes|chaiana_hermes@yahoo.com.br|true|false|Bootcamp React|
 
 ## Linguagens, dependencias e libs utilizadas 
