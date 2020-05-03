@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import modelCertificate from '../../assets/model_certificate.PNG'
+import modelCertificate from '../../assets/model_certificate.png'
 
 function ModelCertificateHome(props) {
 
