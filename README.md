@@ -78,7 +78,7 @@ A nossa simulação de banco de dados foi feita com JSON. Foram separados um par
 | -------- |-------- |-------- |-------- |-------- |
 |Chaiana Hermes|chaiana_hermes@yahoo.com.br|true|false|Bootcamp React|
 
-## Linguagens, dependencias e libs utilizadas :books:
+## Linguagens, dependencias e libs utilizadas 
 
 - [React](https://pt-br.reactjs.org/docs/create-a-new-react-app.html)
 - [React PDF](https://react-pdf.org/)
