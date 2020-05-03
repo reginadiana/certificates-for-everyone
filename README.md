@@ -125,4 +125,10 @@ Permite visualizar uma animação enquanto o usuário espera o e-mail ser enviad
 
 ## Como contribuir para a plataforma 
 
+- [ ] Tarefa 1
+- [ ] Tarefa 2
+- [ ] Tarefa 3
+
 ## Resolvendo Problemas
+
+Vá para issues e veja os problemas que surgiram durante o desenvolvimento do projeto e como foram resolvidos.
