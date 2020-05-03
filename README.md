@@ -28,6 +28,12 @@ Desenvolver uma plataforma capaz de gerar certificados em PDF de eventos e curso
 
 > https://certificates-for-everyone-womakerscode.netlify.app/
 
+## Pré-requesitos
+
+:warning: [Node](https://nodejs.org/en/download/)
+
+:warning: [Yarn](https://classic.yarnpkg.com/pt-BR/docs/install/#windows-stable) 
+
 ## Como rodar a aplicação 
 
 No terminal, clone o projeto: 
