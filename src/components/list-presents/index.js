@@ -139,58 +139,6 @@ function ListOfPresents(props) {
 			}))
 		}
     	
-    	/*Função destinada ao envio de e-mail, recebe o e-mail do participante*/
-		const sendEmail = (to) =>{	
-
-			/*Este e-mail enviará os certificados*/
-			let from = "certificadowomakerscode@gmail.com"
-
-			setLoadingEmail(true)
-			const input = document.getElementsByClassName('certificate-background')[0];
-			window.scrollTo(0,0);
-			html2canvas(input, {
-					windowWidth: input.scrollWidth,
-					windowHeight: input.scrollHeight
-				})
-				.then((canvas) => {
-					const imgData = canvas.toDataURL('image/png');
-					const pdf = new jsPDF('l', 'mm', 'a4', true);
-
-					pdf.addImage(imgData, 'PNG', 3, 3, 380, 265, '', 'SLOW');
-					var formData = new FormData();
-					formData.append('file', new Blob([pdf.output('blob')], {type: 'application/pdf'}), "certificado.pdf");
-					formData.append('from', from);
-					formData.append('to', to);
-
-					fetch('http://localhost:8080/send-mail', {
-						method: 'POST',
-						body: formData,
-					})
-					.then(success =>  message.success("Email enviado com sucesso!"))
-					.then(before => setLoadingEmail(false))
-					.catch(error => message.error("Não foi possível enviar seu email!")
-					.then(before => setLoadingEmail(false))
-					);
-				});
-
-			
-
-			setParticipantes(participantes.map(itemParticipante => {
-				
-				/*Buscando o participante que recebeu o email*/
-				if(itemParticipante.email === to) {
-
-					itemParticipante['receiveCertificate'] = true
-					return itemParticipante;
-
-				} else {
-
-					return itemParticipante;
-				}
-				
-			}))
-
-		}
 
 		const dataSource = []
 
@@ -339,7 +287,7 @@ function ListOfPresents(props) {
 						<p className="p-2-certificate">{evento.user}</p>
 					</div>
 
-					<Button className="button-email" type="primary" onClick={() => sendEmail(thisParticipante.email)}>Enviar certificado</Button>
+					<Button className="button-email" type="primary" onClick={() => message.info("Infelizmente o backend da nossa aplicação não funciona com Netlify. Por favor rode localmente")}>Enviar certificado</Button>
 					<Button className="button-voltar" onClick={ () => setVisible(true) }>Voltar para a lista de participantes</Button>
 				</div>
 			</>
