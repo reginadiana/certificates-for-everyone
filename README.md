@@ -28,6 +28,10 @@ Desenvolver uma plataforma capaz de gerar certificados em PDF de eventos e curso
 
 > https://certificates-for-everyone-womakerscode.netlify.app/
 
+## Layout 
+
+![img](https://github.com/Diana-ops/create-react-app/blob/master/layout.png)
+
 ## Pré-requesitos
 
 - [Node](https://nodejs.org/en/download/)
