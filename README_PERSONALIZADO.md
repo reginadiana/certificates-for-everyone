@@ -17,7 +17,7 @@
 
 :small_blue_diamond: [Deploy da Aplicação com Netlify](#deploy-da-aplicação-com-netlify-dash)
 
-:small_blue_diamond: [Pré-requesitos](#pré-requesitos)
+:small_blue_diamond: [Pré-requisitos](#pré-requisitos)
 
 :small_blue_diamond: [Como rodar a aplicação](#como-rodar-a-aplicação-arrow_forward)
 
@@ -61,7 +61,7 @@ Desenvolver uma plataforma capaz de gerar certificados em PDF de eventos e curso
 
 > https://certificates-for-everyone-womakerscode.netlify.app/
 
-## Pré-requesitos
+## Pré-requisitos
 
 :warning: [Node](https://nodejs.org/en/download/)
 
