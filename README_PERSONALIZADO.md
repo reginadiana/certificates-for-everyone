@@ -3,6 +3,7 @@
 </p>
 
 ![Netlify](https://img.shields.io/netlify/e6d5a4e0-dee1-4261-833e-2f47f509c68f?color=blue&label=netlify%20deploy&logoColor=blue&style=flat-square)
+![APM](https://img.shields.io/apm/l/vim-mode?style=flat-square)
 
 
 
