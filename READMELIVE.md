@@ -1,5 +1,9 @@
 <h1 align="center"> Certificates for Everyone </h1>
 
+<p align="center">
+  <img src="https://img.shields.io/static/v1?label=REACT&message=Framework&color=Blue&style=for-the-badge&logo=REACT"/>
+</p>
+
 > Status do Projeto: Concluido :heavy_check_mark:
 
 ## Tabela de Conteúdos 
