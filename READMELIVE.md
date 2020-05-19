@@ -5,6 +5,7 @@
 ## Tabela de Conteúdos 
 
 :small_blue_diamond: [Como contribuir para o projeto](#como-contribuir-para-o-projeto)
+:small_blue_diamond: [Resolvendo Problemas](#resolvendo-problemas-exclamation)
 
 ## Descrição do Projeto :star:
 
