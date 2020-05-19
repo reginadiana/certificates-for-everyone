@@ -2,10 +2,9 @@
   <img src="https://user-images.githubusercontent.com/46378210/80918424-34fffd00-8d3b-11ea-99ee-477a3ebf4d89.png">
 </p>
 
-![Netlify](https://img.shields.io/netlify/e6d5a4e0-dee1-4261-833e-2f47f509c68f?color=blue&label=netlify%20deploy&logoColor=blue&style=flat-square)
-![APM](https://img.shields.io/apm/l/vim-mode?style=flat-square)
-
-
+![](https://img.shields.io/static/v1?label=react&message=framework&color=blue&style=for-the-badge&logo=REACT)
+![](https://img.shields.io/static/v1?label=Netlify&message=deploy&color=blue&style=for-the-badge&logo=netlify)
+![](http://img.shields.io/static/v1?label=License&message=MIT&color=green&style=for-the-badge)
 
 ## Desenvolvedoras :octocat:
 
