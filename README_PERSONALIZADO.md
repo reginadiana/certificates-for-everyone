@@ -2,9 +2,11 @@
   <img src="https://user-images.githubusercontent.com/46378210/80918424-34fffd00-8d3b-11ea-99ee-477a3ebf4d89.png">
 </p>
 
-![](https://img.shields.io/static/v1?label=react&message=framework&color=blue&style=for-the-badge&logo=REACT)
-![](https://img.shields.io/static/v1?label=Netlify&message=deploy&color=blue&style=for-the-badge&logo=netlify)
-![](http://img.shields.io/static/v1?label=License&message=MIT&color=green&style=for-the-badge)
+<p align="center">
+  <img src="https://img.shields.io/static/v1?label=react&message=framework&color=blue&style=for-the-badge&logo=REACT"/>
+  <img src="https://img.shields.io/static/v1?label=Netlify&message=deploy&color=blue&style=for-the-badge&logo=netlify"/>
+  <img src="http://img.shields.io/static/v1?label=License&message=MIT&color=green&style=for-the-badge"/>
+</p>
 
 ## Desenvolvedoras :octocat:
 
