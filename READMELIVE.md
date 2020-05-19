@@ -1,20 +1,24 @@
-# Certificates for Everyone 
+<h1 align="center"> Certificates for Everyone </h1>
 
-Status do Projeto: Concluido 
+> Status do Projeto: Concluido :heavy_check_mark:
 
-## Descrição do Projeto 
+## Descrição do Projeto :star:
 
 Plataforma capaz de gerar certifificados em PDF de eventos e cursos para enviá-los por email aos participantes. 
 
 ## O que platafroma é capaz de fazer 
 
-- Gerar PDF dos certificados
-- Envio dos certificados por email
-- Escrever assianatura digital 
-- Layout responsivo 
-- Autenticação com o Google 
+:trophy: Gerar PDF dos certificados
 
-## Deploy da aplicação 
+:trophy: Envio dos certificados por email
+
+:trophy: Escrever assianatura digital 
+
+:trophy: Layout responsivo 
+
+:trophy: Autenticação com o Google 
+
+## Deploy da aplicação :dash:
 
 > https://certificates-for-everyone-womakerscode.netlify.app/
 
@@ -24,10 +28,11 @@ Plataforma capaz de gerar certifificados em PDF de eventos e cursos para enviá-
 
 ## Pré-Requisitos 
 
-- [Yarn](https://classic.yarnpkg.com/pt-BR/docs/install/#windows-stable) 
-- [Node](https://nodejs.org/en/) 
+:warning: [Yarn](https://classic.yarnpkg.com/pt-BR/docs/install/#windows-stable) 
 
-## Depencias e Linguagens 
+:warning: [Node](https://nodejs.org/en/) 
+
+## Depencias e Linguagens :books:
 
 - React
 - React PDF
@@ -54,7 +59,7 @@ Instale as dependencias
 yarn install
 ```
 
-## Como rodar a aplicação
+## Como rodar a aplicação :arrow_forward:
 
 Execução do projeto
 
@@ -69,7 +74,7 @@ nom test
 rspec
 ```
 
-## JSON 
+## JSON :floppy_disk:
 
 |nome|email|senha|token|avatar|
 | -------- | -------- | -------- | -------- | -------- |
@@ -82,20 +87,20 @@ rails db:migrate
 rails db:reset
 ```
 
-## Resolvendo Problemas 
+## Resolvendo Problemas :exclamation:
 
 Voce pode encontrar soluções de problemas encontrados durante o desenvolvimento deste projeto em [issues](https://github.com/Diana-ops/rental-cars-treina-dev-1/issues) 
 
 ## Contribuintes 
 
-- [Diana Regina](https://github.com/Diana-ops) 
-- [Bee Bones](https://github.com/beebones))
-- [Chaian Hermes](https://github.com/chaihermes)
-- [Rose Ahakawa](https://github.com/ahakawa)
+[<img src="https://avatars2.githubusercontent.com/u/46378210?s=400&u=071f7791bb03f8e102d835bdb9c2f0d3d24e8a34&v=4" width="115"><br/><em>Diana Regina</em>](https://github.com/Diana-ops) | [<img src="https://media-exp1.licdn.com/dms/image/C4E03AQGE1Yb8mAu4_A/profile-displayphoto-shrink_200_200/0?e=1592438400&v=beta&t=-ANjM-l29GR6AVf_OxXkfk7NH424lVgJmjQIgIos2Ck" width="115"><br/><em>Chaian Hermes</em>](https://github.com/chaihermes)
+| ------ | ------ |
 
-# Como contribuir para o projeto
+## Como contribuir para o projeto
 
-- Melhorar Layout
-- Desenvolver Aplicação X
-- Utilizar Redux para trabalhar com os dadoS
+:memo: Melhorar Layout
+
+:memo: Desenvolver Aplicação X
+
+:memo: Utilizar Redux para trabalhar com os dadoS
 
