@@ -2,8 +2,11 @@
   <img src="https://user-images.githubusercontent.com/46378210/82461691-187cf800-9a91-11ea-98e0-446d0b942eab.png">
 </p>
 
-> Status do Projeto: 
-:heavy_check_mark:
+<p align="center">
+<img src="https://img.shields.io/static/v1?label=react&message=framework&color=blue&style=for-the-badge&logo=react">
+</p>
+
+> Status do Projeto: :heavy_check_mark:
 
 ## Tabela de Conteudos 
 
