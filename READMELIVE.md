@@ -73,3 +73,20 @@ rails db:server
 |name|email|senha|token|avatar|
 | -------- | -------- | -------- | -------- | -------- | 
 |Lais Lima| lais@gmail.com | lais123 | true | https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS9-U_HbQAipum9lWln3APcBIwng7T46hdBA42EJv8Hf6Z4fDT3&usqp=CAU |
+
+## Resolvendo Problemas
+
+Em [issues](https://github.com/Diana-ops/rental-cars-treina-dev-1/issues) foram abertos alguns problemas gerados durante o desenvolviment desse projeto e como foram resolvidos
+
+# Contribuintes 
+
+- [Bee Bones](https://github.com/beebones)
+- [Chaiana Hermes](https://github.com/chaihermes)
+- [Diana Regina](https://github.com/Diana-ops)
+- [Rose Ahakawa](https://github.com/ahakawa)
+
+## Tarefas Pendentes 
+
+- Autenticação com outras redes sociais como facebook, twitter, linkdin
+- Utilizar Redux para trabalhar com os dados
+- Melhorar layout 
