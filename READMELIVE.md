@@ -5,6 +5,11 @@
 > Status do Projeto: 
 :heavy_check_mark:
 
+## Tabela de Conteudos 
+
+- [Tarefas Pendentes](#tarefas-pendentes)
+- [Como rodar o projeto](#como-rodar-o-projeto-arrow_forward)
+
 ## Descrião do Probjeto :star:
 
 Plataforma capaz de gerar certificados em PDF de eventos e cursos para enviá-los por email aos participantes
