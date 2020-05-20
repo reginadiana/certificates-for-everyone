@@ -8,7 +8,7 @@
 ## Tabela de Conteudos 
 
 - [Tarefas Pendentes](#tarefas-pendentes)
-- [Como rodar o projeto](#como-rodar-o-projeto-arrow_forward)
+- [Como rodar a aplicação](#como-rodar-a-aplicação-arrow_forward)
 
 ## Descrião do Probjeto :star:
 
