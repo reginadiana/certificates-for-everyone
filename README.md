@@ -1,44 +1,79 @@
-<h1 align="center"> Certificates for Everyone </h1>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/46378210/80918424-34fffd00-8d3b-11ea-99ee-477a3ebf4d89.png">
+</p>
 
-> Status do Projeto: Concluido 
+<p align="center">
+  <img src="https://img.shields.io/static/v1?label=react&message=framework&color=blue&style=for-the-badge&logo=REACT"/>
+  <img src="https://img.shields.io/static/v1?label=Netlify&message=deploy&color=blue&style=for-the-badge&logo=netlify"/>
+  <img src="http://img.shields.io/static/v1?label=License&message=MIT&color=green&style=for-the-badge"/>
+</p>
 
-## Descrição do projeto
+## Desenvolvedoras :octocat:
+
+| [<img src="https://avatars2.githubusercontent.com/u/40778029?s=400&u=0ff80f01d3cb66b2af110aea5d30701d8ac6b6ec&v=4" width=115><br><sub>Bee Bones</sub>](https://github.com/beebones) |[<img src="https://media-exp1.licdn.com/dms/image/C4E03AQGE1Yb8mAu4_A/profile-displayphoto-shrink_200_200/0?e=1592438400&v=beta&t=-ANjM-l29GR6AVf_OxXkfk7NH424lVgJmjQIgIos2Ck" width=115><br><sub>Chaiana Hermes</sub>](https://github.com/chaihermes) | [<img src="https://avatars2.githubusercontent.com/u/46378210?s=400&u=071f7791bb03f8e102d835bdb9c2f0d3d24e8a34&v=4" width=115><br><sub>Diana Regina</sub>](https://github.com/Diana-ops) | [<img src="https://avatars0.githubusercontent.com/u/56303576?s=400&u=b3afc995a8a4a0a5b0af9ff64e4953c907927f23&v=4" width=115><br><sub>Rose Ahakawa</sub>](https://github.com/ahakawa) |
+| :---: | :---: | :---: | :---:
+
+> Status do Projeto: Concluido :heavy_check_mark:
+
+### Tópicos 
+
+:small_blue_diamond: [Descrição do projeto](#descrição-do-projeto-star)
+
+:small_blue_diamond: [O que a plataforma é capaz de fazer](#o-que-a-plataforma-é-capaz-de-fazer-checkered_flag)
+
+:small_blue_diamond: [Deploy da Aplicação com Netlify](#deploy-da-aplicação-com-netlify-dash)
+
+:small_blue_diamond: [Pré-requisitos](#pré-requisitos)
+
+:small_blue_diamond: [Como rodar a aplicação](#como-rodar-a-aplicação-arrow_forward)
+
+:small_blue_diamond: [JSON](#json-floppy_disk)
+
+:small_blue_diamond: [Páginas](#páginas)
+
+:small_blue_diamond: [CRUD](#crud)
+
+:small_blue_diamond: [Linguagens, dependencias e libs utilizadas ](#linguagens-dependencias-e-libs-utilizadas-books)
+
+:small_blue_diamond: [Dependência externa](#dependência-externa-incoming_envelope)
+
+## Descrição do projeto :star:
 
 <p align="justify">
 Desenvolver uma plataforma capaz de gerar certificados em PDF de eventos e cursos para enviá-los por e-mail aos participantes.
 </p>
 
-## O que a plataforma é capaz de fazer 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/46378210/80231326-9a603980-8629-11ea-8798-eabacda99982.png"/>
+</p>
 
-- Gerar PDF do certificado com as informações preenchidas no formulário para cada participantes para envio de e-mail 
+## O que a plataforma é capaz de fazer :checkered_flag:
 
-- Check-list de participantes, permitindo selecionar quem irá receber os certificados 
+:trophy: Gerar PDF do certificado com as informações preenchidas no formulário para cada participantes para envio de e-mail 
 
-- Permite que o organizador do evento escreva sua assinatura digital dentro da plataforma
+:trophy: Check-list de participantes, permitindo selecionar quem irá receber os certificados 
 
-- Oferece layout responsivo 
+:trophy: Permite que o organizador do evento escreva sua assinatura digital dentro da plataforma
 
-- Cadastrar organizadores 
+:trophy: Oferece layout responsivo 
 
-- Cadastrar eventos 
+:trophy: Cadastrar organizadores 
 
-- Cadastrar participantes para cada evento
+:trophy: Cadastrar eventos 
 
-## Deploy da Aplicação com Netlify: 
+:trophy: Cadastrar participantes para cada evento
+
+## Deploy da Aplicação com Netlify :dash:
 
 > https://certificates-for-everyone-womakerscode.netlify.app/
 
-## Layout 
+## Pré-requisitos
 
-![img](https://github.com/Diana-ops/create-react-app/blob/master/layout.png)
+:warning: [Node](https://nodejs.org/en/download/)
 
-## Pré-requesitos
+:warning: [Yarn](https://classic.yarnpkg.com/pt-BR/docs/install/#windows-stable) 
 
-- [Node](https://nodejs.org/en/download/)
-
-- [Yarn](https://classic.yarnpkg.com/pt-BR/docs/install/#windows-stable) 
-
-## Como rodar a aplicação 
+## Como rodar a aplicação :arrow_forward:
 
 No terminal, clone o projeto: 
 
@@ -66,9 +101,7 @@ yarn start
 
 Pronto, agora é possível acessar a aplicação a partir da rota http://localhost:3000/ 
 
-## Como rodar os testes da aplicação
-
-## JSON 
+## JSON :floppy_disk:
 
 A nossa simulação de banco de dados foi feita com JSON. Foram separados um para [usuarios](https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator/blob/DianaRegina/certificate/src/services/users.json), [participantes](https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator/blob/DianaRegina/certificate/src/services/participantes.json) e [eventos](https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator/blob/DianaRegina/certificate/src/services/events.json):
 
@@ -81,16 +114,16 @@ A nossa simulação de banco de dados foi feita com JSON. Foram separados um par
 ### Evento: 
 
 |user|company|course|startDate|finishDate|workload|logo|
-| -------- | -------- | -------- | -------- |-------- | -------- | -------- |
+| -------- |-------- |-------- |-------- |-------- |-------- |-------- |
 |Lais Lima|WomakersCode|Bootcamp React|01/02/2020|28/03/2020|56|https://miro.medium.com/max/478/1*jriufqYKgJTW4DKrBizU5w.png|https://upload.wikimedia.org/wikipedia/commons/7/7f/Assinatura_Jos%C3%A9_Saramago.png|
 
 ### Participante: 
 
 |name|email|present|receiveCertificate|course|
-| -------- | -------- | -------- | -------- | -------- |
+| -------- |-------- |-------- |-------- |-------- |
 |Chaiana Hermes|chaiana_hermes@yahoo.com.br|true|false|Bootcamp React|
 
-## Linguagens, dependencias e libs utilizadas 
+## Linguagens, dependencias e libs utilizadas :books:
 
 - [React](https://pt-br.reactjs.org/docs/create-a-new-react-app.html)
 - [React PDF](https://react-pdf.org/)
@@ -116,23 +149,8 @@ Para desenvolver a assinatura digital:
 Permite visualizar uma animação enquanto o usuário espera o e-mail ser enviado:
 - [React-Spinkit](https://github.com/KyleAMathews/react-spinkit)
 
-## Dependência externa 
+## Dependência externa :incoming_envelope:
 [Server Mailjet](https://github.com/beebones/server-mailjet) - Back-end feito em **Golang** utiizado para consumir api **mailjet** e enviar os emails com o certificado.
 <hr/>
 
-## Desenvolvedoras
-
-- [Bee Bones](https://github.com/beebones)
-- [Chaiana Hermes](https://github.com/chaihermes)
-- [Diana Regina](https://github.com/Diana-ops)
-- [Rose Ahakawa](https://github.com/ahakawa)
-
-## Como contribuir para a plataforma 
-
-- [ ] Tarefa 1
-- [ ] Tarefa 2
-- [ ] Tarefa 3
-
-## Resolvendo Problemas
-
-Vá para issues e veja os problemas que surgiram durante o desenvolvimento do projeto e como foram resolvidos.
+<img src="https://user-images.githubusercontent.com/46378210/82743777-49d21e00-9d46-11ea-9221-3d035cfd8c1b.png" width="115">
