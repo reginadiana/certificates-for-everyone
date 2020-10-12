@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style/App.css";
 import Routes from "./routes";
-
-//Importado a biblioteca ant design
-import "antd/dist/antd.css";
-
-//Importado a biblioteca tachyons
 import "tachyons";
+import { UserContext } from "./contexts/user-autenticate"
 
 function App() {
-  return <Routes />;
+  const [email, setEmail] = useState("email aqui");
+  const value = { email, setEmail };
+
+  return(
+    <UserContext.Provider value={value}>
+      <UserContext.Consumer>
+        {() => <Routes />}
+      </UserContext.Consumer>
+    </UserContext.Provider>
+  );
 }
 
 export default App;

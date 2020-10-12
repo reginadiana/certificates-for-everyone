@@ -1,4 +1,5 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useContext, useRef } from "react";
+import { UserContext } from "../../contexts/user-autenticate"
 
 /*Estilos*/
 import "antd/dist/antd.css";
@@ -25,10 +26,10 @@ import {
   UserOutlined,
 } from "@ant-design/icons";
 
-import "./styles.css";
-import "./styles-events.css";
-import "./style-form-event.css";
-import "./style-digital-assinature.css";
+// import "./styles.css";
+// import "./styles-events.css";
+// import "./style-form-event.css";
+// import "./style-digital-assinature.css";
 
 /*Importando os dados do evento*/
 import eventosData from "../../services/events.json";
@@ -42,7 +43,9 @@ import InfoEvent from "../../components/info-event/index";
 import SignaturePad from "react-signature-canvas";
 import Popup from "reactjs-popup";
 
-function ListEvents(props) {
+function ListEvents( props ) {
+  const { email } = useContext(UserContext);
+  console.log(email)
   const { Meta } = Card;
   /*Recebe o organizador e o JSON de organizadores*/
   const { organizador, users } = props;

@@ -1,5 +1,4 @@
-/*Lista de eventos - div*/
-.listEvents {
+Lista de eventos - div .listEvents {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin-bottom: -30%;

@@ -3,7 +3,6 @@ import * as theme from "../../style/theme";
 
 export const Container = styled.footer`
   background-color: ${theme.colors.black};
-  margin-top: 25%;
 
   & > div h3,
   h4,
