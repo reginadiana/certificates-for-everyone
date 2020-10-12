@@ -27,9 +27,8 @@
   "scripts": {
     "start": "react-scripts start",
     "start:lambda": "netlify-lambda serve src/lambda",
-    "build": "run-p build:**",
-    "build:app": "react-scripts build",
     "build": "react-scripts build",
+    "build:app": "react-scripts build",
     "build:lambda": "netlify-lambda build src/lambda",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -51,11 +50,14 @@
     ]
   },
   "devDependencies": {
-    "netlify-lambda": "^1.4.5",
-    "npm-run-all": "^4.1.5",
+    "eslint": "^7.11.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-prettier": "^3.1.4",
     "husky": "^4.2.5",
     "lint-staged": "^10.1.3",
-    "prettier": "^2.0.4",
+    "netlify-lambda": "^1.4.5",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.1.2",
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
     "tachyons": "^4.10.0"

@@ -1,5 +1,5 @@
 .model {
-  background-image: url('../../assets/wallpaper-section.jpg.png');
+  background-image: url("../../assets/wallpaper-section.jpg.png");
 
   /*Compensando o margin-top definido para o footer*/
   margin-bottom: -40%;
@@ -15,7 +15,7 @@
 .h1-model {
   margin-left: 3%;
   margin-top: 3%;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   padding-top: 3%;
 }
 
@@ -43,11 +43,9 @@
     padding-top: 6%;
   }
 
-
   .modelCertificate {
     width: 70%;
     height: 70%;
     margin-left: 15%;
   }
-
 }

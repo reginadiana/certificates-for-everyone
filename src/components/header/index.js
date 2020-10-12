@@ -7,9 +7,7 @@ function Header() {
     <div className="div-header">
       <Menu1Header />
 
-      <h2 className="h2-header">
-        Certificates for Everyone
-      </h2>
+      <h2 className="h2-header">Certificates for Everyone</h2>
     </div>
   );
 }
