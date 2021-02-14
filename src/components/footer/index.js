@@ -7,7 +7,7 @@ const Footer = () => (
   <Styled.Container>
     <Styled.Lists>
       <ol>
-        <h3>Nossas Desenvolvedoras</h3>
+        <h3>Desenvolvedoras</h3>
         {linkedinProfile.map(({ name, link }) => (
           <li>
             <a href={link}>{name}</a>

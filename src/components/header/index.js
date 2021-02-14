@@ -1,15 +1,12 @@
 import React from "react";
-import Menu1Header from "../menu-1-header/index";
-import "./style.css";
+import MenuBar from "../menu-bar/index";
+import * as Styled from "./style";
 
-function Header() {
-  return (
-    <div className="div-header">
-      <Menu1Header />
-
-      <h2 className="h2-header">Certificates for Everyone</h2>
-    </div>
-  );
-}
+const Header = () => (
+  <Styled.Container>
+    <MenuBar />
+    <Styled.Title>Certificates for Everyone</Styled.Title>
+  </Styled.Container>
+);
 
 export default Header;

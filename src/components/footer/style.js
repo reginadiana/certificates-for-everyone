@@ -2,38 +2,42 @@ import styled from "styled-components";
 import * as theme from "../../style/theme";
 
 export const Container = styled.footer`
+  position: absolute;
+  width: 100%;
+  bottom: 0;
   background-color: ${theme.colors.black};
+  font-size: ${theme.fonts.size14};
 
   & > div h3,
   h4,
   a {
     color: ${theme.colors.white};
+    text-align: left;
   }
 
   ol li a {
     line-height: 1.5;
-    font-size: 1.2rem;
+  }
 
-    @media screen and (max-width: 660px) {
-      font-size: 1rem;
-    }
+  @media (min-width: 720px) {
+    font-size: ${theme.fonts.size16};
   }
 `;
 
 export const Lists = styled.div`
   display: flex;
-  padding: 20px;
+  padding: ${theme.gaps.gap24};
+  flex-direction: column;
 
   h3 {
-    font-size: 1.3rem;
     font-weight: bold;
   }
 
-  @media screen and (max-width: 660px) {
-    flex-direction: column;
+  @media (min-width: 720px) {
+    flex-direction: row;
 
-    h3 {
-      font-size: 1rem;
+    ol {
+      margin-left: ${theme.gaps.gap24};
     }
   }
 `;
@@ -43,5 +47,9 @@ export const Licence = styled.div`
   align-items: center;
   justify-content: center;
   background-color: ${theme.colors.dark};
-  padding: 15px 0;
+  padding: ${theme.gaps.gap16} 0;
+
+  h4 {
+    text-align: center;
+  }
 `;

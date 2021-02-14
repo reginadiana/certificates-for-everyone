@@ -8,17 +8,15 @@ import ModelCertificateHome from "../../components/model-certificate-home/index"
 import Steps from "../../components/steps/index";
 import Footer from "../../components/footer/index";
 
-function Home(props) {
-  return (
-    <>
-      <Header />
-      <Section />
-      <Cards />
-      <Steps />
-      <ModelCertificateHome />
-      <Footer />
-    </>
-  );
-}
+const Home = () => (
+  <>
+    <Header />
+    {/* <Section />
+    <Cards />
+    <Steps />
+    <ModelCertificateHome /> */}
+    <Footer />
+  </>
+);
 
 export default Home;
