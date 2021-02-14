@@ -1,5 +1,5 @@
 import React, { useState, useContext, useRef } from "react";
-import { UserContext } from "../../contexts/user-autenticate"
+import { UserContext } from "../../contexts/user-autenticate";
 
 /*Estilos*/
 import "antd/dist/antd.css";
@@ -43,12 +43,11 @@ import InfoEvent from "../../components/info-event/index";
 import SignaturePad from "react-signature-canvas";
 import Popup from "reactjs-popup";
 
-function ListEvents( props ) {
+const ListEvents = ({ organizador, users }) => {
   const { email } = useContext(UserContext);
-  console.log(email)
+  console.log(email);
   const { Meta } = Card;
   /*Recebe o organizador e o JSON de organizadores*/
-  const { organizador, users } = props;
 
   /*Trabalham para trocar a tela da lista de eventos com o formulário de edição/criação*/
   const [toEditFormEvent, setToEditFormEvent] = useState(false);
@@ -644,6 +643,6 @@ function ListEvents( props ) {
       )}
     </>
   );
-}
+};
 
 export default ListEvents;

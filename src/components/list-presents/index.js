@@ -29,10 +29,8 @@ import participantesData from "../../services/participantes.json";
 import stars from "../../assets/stars.png";
 import logo from "../../assets/img/logo_texto_preto.png";
 
-function ListOfPresents(props) {
+const ListOfPresents = ({ evento }) => {
   /*Recebe o evento selecionado pelo organizador*/
-  const { evento } = props;
-
   /*Nome do novo participante no input*/
   const [name, setName] = useState("");
 
@@ -374,6 +372,6 @@ function ListOfPresents(props) {
       </div>
     </>
   );
-}
+};
 
 export default ListOfPresents;

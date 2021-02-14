@@ -1,10 +1,9 @@
 import React from "react";
 import { List, Divider, Tag } from "antd";
-import "./style.css";
+import "./style.js";
+import * as Styled from "./style";
 
-function InfoEvent(props) {
-  const { evento } = props;
-
+const InfoEvent = ({ evento }) => {
   const dataEvent = [
     {
       data: evento.company,
@@ -26,23 +25,23 @@ function InfoEvent(props) {
 
   return (
     <>
-      <div className="up-info"></div>
-      <div className="list-info">
+      <Styled.UpInfo></Styled.UpInfo>
+      <Styled.ListInfo>
         <Divider orientation="left">{evento.course}</Divider>
         <List
           header={<div>Informações do evento</div>}
           bordered
           dataSource={dataEvent}
-          renderItem={(dataEvent) => (
+          renderItem={({ description, data }) => (
             <List.Item>
-              <Tag color="default">{dataEvent.description}</Tag>
-              {dataEvent.data}
+              <Tag color="default">{description}</Tag>
+              {data}
             </List.Item>
           )}
         />
-      </div>
+      </Styled.ListInfo>
     </>
   );
-}
+};
 
 export default InfoEvent;

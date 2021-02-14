@@ -1,6 +1,4 @@
 import React from "react";
-
-/*Componentes*/
 import Header from "../../components/header/index";
 import Section from "../../components/section/index";
 import Cards from "../../components/cards/index";

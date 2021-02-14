@@ -1,16 +1,10 @@
 import React, { useState } from "react";
-
-/*Estilos*/
 import "antd/dist/antd.css";
 import { Avatar, message, Button, Input, Popconfirm } from "antd";
 import "./style.css";
-
-/*Rotas*/
 import { Redirect } from "react-router-dom";
 
-function ProfileCard(props) {
-  const { organizador, users, assinatura } = props;
-
+const ProfileCard = ({ organizador, users, assinatura }) => {
   /*Variável que irá renderizar o formulário de registro, mas com 
 	os dados do usuário para que possam ser atualizados*/
 
@@ -199,6 +193,6 @@ function ProfileCard(props) {
       )}
     </>
   );
-}
+};
 
 export default ProfileCard;

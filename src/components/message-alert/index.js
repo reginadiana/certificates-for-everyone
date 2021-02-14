@@ -1,16 +1,13 @@
 import React from "react";
-import "./style.css";
+import * as Styled from "./style";
 
-function MessageAlert(props) {
-  return (
-    <div className="div-messageAlert">
-      <h3 className="h3-success">
-        Os certificados foram
-        <span className="span-success"> enviados com sucesso</span>, <br />
-        obrigada por usar nossa plataforma.
-      </h3>
-    </div>
-  );
-}
+const MessageAlert = () => (
+  <Styled.Container>
+    <Styled.Title>
+      Os certificados foram enviados com sucesso obrigada por usar nossa
+      plataforma.
+    </Styled.Title>
+  </Styled.Container>
+);
 
 export default MessageAlert;

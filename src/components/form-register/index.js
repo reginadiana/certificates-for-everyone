@@ -16,7 +16,7 @@ import users from "../../services/users.json";
 
 import ListEvents from "../../components/list-events/index";
 
-const FormRegister = (props) => {
+const FormRegister = () => {
   /*Verifica se o acesso foi aprovado*/
   const [acessAproved, setAproved] = useState(false);
 
