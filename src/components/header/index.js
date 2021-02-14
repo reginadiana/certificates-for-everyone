@@ -5,7 +5,9 @@ import * as Styled from "./style";
 const Header = () => (
   <Styled.Container>
     <MenuBar />
-    <Styled.Title>Certificates for Everyone</Styled.Title>
+    <Styled.ContainerTitle>
+      <Styled.Title>Certificates for Everyone</Styled.Title>
+    </Styled.ContainerTitle>
   </Styled.Container>
 );
 

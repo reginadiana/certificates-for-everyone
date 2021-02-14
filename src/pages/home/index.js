@@ -11,7 +11,8 @@ import Footer from "../../components/footer/index";
 const Home = () => (
   <>
     <Header />
-    {/* <Section />
+    <Section />
+    {/*
     <Cards />
     <Steps />
     <ModelCertificateHome /> */}

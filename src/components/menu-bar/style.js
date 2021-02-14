@@ -8,7 +8,7 @@ export const Container = styled.div`
 
   @media (min-width: 720px) {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
   }
 `;
 

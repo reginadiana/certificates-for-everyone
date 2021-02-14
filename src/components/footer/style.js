@@ -2,7 +2,7 @@ import styled from "styled-components";
 import * as theme from "../../style/theme";
 
 export const Container = styled.footer`
-  position: absolute;
+  //position: absolute;
   width: 100%;
   bottom: 0;
   background-color: ${theme.colors.black};
