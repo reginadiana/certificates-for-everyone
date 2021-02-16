@@ -44,8 +44,8 @@ import SignaturePad from "react-signature-canvas";
 import Popup from "reactjs-popup";
 
 const ListEvents = ({ organizador, users }) => {
-  const { email } = useContext(UserContext);
-  console.log(email);
+  const { user } = useContext(UserContext);
+  console.log(user);
   const { Meta } = Card;
   /*Recebe o organizador e o JSON de organizadores*/
 
