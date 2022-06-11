@@ -1,5 +1,5 @@
-import React from "react";
-import * as Styled from "./style";
+import React from 'react';
+import * as Styled from './style';
 
 const MessageAlert = () => (
   <Styled.Container>

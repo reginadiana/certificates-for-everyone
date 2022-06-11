@@ -1,34 +1,34 @@
-import React, { useState, useContext } from "react";
-import { useFormik, FormikProvider, ErrorMessage } from "formik";
-import { message } from "antd";
+import React, { useState, useContext } from 'react';
+import { useFormik, FormikProvider, ErrorMessage } from 'formik';
+import { message } from 'antd';
 import {
   UserOutlined,
   LockOutlined,
   ScheduleOutlined,
-} from "@ant-design/icons";
-import GoogleLogin from "react-google-login";
-import * as Yup from "yup";
-import * as Styled from "./style";
-import registered_users from "../../services/users.json";
-import { UserContext } from "../../contexts/user-autenticate";
-import { useHistory } from "react-router-dom";
+} from '@ant-design/icons';
+import GoogleLogin from 'react-google-login';
+import * as Yup from 'yup';
+import * as Styled from './style';
+import registered_users from '../../services/users.json';
+import { UserContext } from '../../contexts/user-autenticate';
+import { useHistory } from 'react-router-dom';
 
 const FormRegister = () => {
   const { setUser } = useContext(UserContext);
 
   const formik = useFormik({
     initialValues: {
-      name: "",
-      email: "",
-      password: "",
+      name: '',
+      email: '',
+      password: '',
       remember: true,
     },
     validationSchema: Yup.object().shape({
-      name: Yup.string().required("Digite seu nome"),
+      name: Yup.string().required('Digite seu nome'),
       email: Yup.string()
-        .email("E-mail inválido")
-        .required("Digite seu e-mail"),
-      password: Yup.string().min(4).required("Digite uma senha"),
+        .email('E-mail inválido')
+        .required('Digite seu e-mail'),
+      password: Yup.string().min(4).required('Digite uma senha'),
     }),
   });
 
@@ -60,8 +60,8 @@ const FormRegister = () => {
       avatar: avatar,
     });
 
-    message.success("Conta criada com sucesso");
-    history.push("/events");
+    message.success('Conta criada com sucesso');
+    history.push('/events');
   };
 
   const verifyAccountExist = (user_email) =>
@@ -71,15 +71,15 @@ const FormRegister = () => {
     var someFieldEmpty = Object.values(values).some((value) => !value);
 
     someFieldEmpty
-      ? message.warning("Por favor, preencha todos os campos")
+      ? message.warning('Por favor, preencha todos os campos')
       : verifyAccountExist(values.email)
-      ? message.warning("Esta conta já existe")
-      : addNewUser(values.name, values.email, values.password, " ");
+      ? message.warning('Esta conta já existe')
+      : addNewUser(values.name, values.email, values.password, ' ');
   };
 
   const responseGoogle = ({ profileObj }) => {
     verifyAccountExist(profileObj.email)
-      ? message.warning("Esta conta já existe")
+      ? message.warning('Esta conta já existe')
       : addNewUser(
           profileObj.name,
           profileObj.email,
@@ -100,7 +100,7 @@ const FormRegister = () => {
               disabled={renderProps.disabled}
               className="loginBtn loginBtn-google"
             >
-              Cadastrar com o Google{" "}
+              Cadastrar com o Google{' '}
             </button>
           )}
           buttonText="Cadastrar com o Google"

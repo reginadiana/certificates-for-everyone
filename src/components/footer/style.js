@@ -1,8 +1,7 @@
-import styled from "styled-components";
-import * as theme from "../../style/theme";
+import styled from 'styled-components';
+import * as theme from '../../style/theme';
 
 export const Container = styled.footer`
-  //position: absolute;
   width: 100%;
   bottom: 0;
   background-color: ${theme.colors.black};
@@ -28,10 +27,6 @@ export const Lists = styled.div`
   display: flex;
   padding: ${theme.gaps.gap24};
   flex-direction: column;
-
-  h3 {
-    font-weight: bold;
-  }
 
   @media (min-width: 720px) {
     flex-direction: row;

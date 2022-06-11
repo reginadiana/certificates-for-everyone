@@ -1,16 +1,16 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import * as Styled from "./style.js";
-import { linkedinProfile } from "../../services/linkedin";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import * as Styled from './style.js';
+import devs from '../../services/devs';
 
 const Footer = () => (
   <Styled.Container>
     <Styled.Lists>
       <ol>
         <h3>Desenvolvedoras</h3>
-        {linkedinProfile.map(({ name, link }) => (
-          <li>
-            <a href={link}>{name}</a>
+        {devs.map((dev, key) => (
+          <li key={key}>
+            <a href={dev.linkedin}>{dev.name}</a>
           </li>
         ))}
       </ol>
@@ -26,7 +26,7 @@ const Footer = () => (
     </Styled.Lists>
 
     <Styled.Licence>
-      <h4>Licença MIT - Copyright - 2020 - Certificates for Everyone</h4>
+      <h4>Licença MIT - Copyright - 2022 - Certificates for Everyone</h4>
     </Styled.Licence>
   </Styled.Container>
 );

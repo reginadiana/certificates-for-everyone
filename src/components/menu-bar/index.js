@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import logoWomakers from "../../assets/img/logo_texto_branco.png";
-import * as Styled from "./style";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import logoWomakers from '../../assets/img/logo_texto_branco.png';
+import * as Styled from './style';
 
 const MenuBar = () => (
   <Styled.Container>

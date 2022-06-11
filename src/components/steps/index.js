@@ -1,5 +1,5 @@
-import React from "react";
-import "./style.css";
+import React from 'react';
+import './style.css';
 
 const Steps = () => (
   <div className="div-steps">

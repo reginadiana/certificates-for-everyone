@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import * as Styled from "./style";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import * as Styled from './style';
 
 const Section = () => (
   <Styled.Container>

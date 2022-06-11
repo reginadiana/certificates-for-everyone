@@ -1,6 +1,6 @@
-import React from "react";
-import MenuBar from "../menu-bar/index";
-import * as Styled from "./style";
+import React from 'react';
+import MenuBar from '../menu-bar/index';
+import * as Styled from './style';
 
 const Header = () => (
   <Styled.Container>

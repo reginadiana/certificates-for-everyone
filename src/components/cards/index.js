@@ -1,8 +1,8 @@
-import React from "react";
-import { Card } from "antd";
-import "antd/dist/antd.css";
-import "./style.js";
-import * as Styled from "./style";
+import React from 'react';
+import { Card } from 'antd';
+import 'antd/dist/antd.css';
+import './style.js';
+import * as Styled from './style';
 
 const Cards = () => (
   <Styled.Container>

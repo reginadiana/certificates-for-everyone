@@ -1,25 +1,25 @@
-import React from "react";
-import { List, Divider, Tag } from "antd";
-import "./style.js";
-import * as Styled from "./style";
+import React from 'react';
+import { List, Divider, Tag } from 'antd';
+import './style.js';
+import * as Styled from './style';
 
 const InfoEvent = ({ evento }) => {
   const dataEvent = [
     {
       data: evento.company,
-      description: "Comunidade",
+      description: 'Comunidade',
     },
     {
       data: evento.startDate,
-      description: "Data de Inicio",
+      description: 'Data de Inicio',
     },
     {
       data: evento.finishDate,
-      description: "Data de Encerramento",
+      description: 'Data de Encerramento',
     },
     {
       data: evento.workload,
-      description: "Carga Horária",
+      description: 'Carga Horária',
     },
   ];
 

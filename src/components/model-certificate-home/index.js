@@ -1,6 +1,6 @@
-import React from "react";
-import * as Styled from "./style";
-import modelCertificate from "../../assets/model_certificate.png";
+import React from 'react';
+import * as Styled from './style';
+import modelCertificate from '../../assets/model_certificate.png';
 
 const ModelCertificateHome = () => (
   <Styled.Container>
