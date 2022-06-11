@@ -177,5 +177,3 @@ Permite visualizar uma animação enquanto o usuário espera o e-mail ser enviad
 **Warnings:**
 
 Ao atualizar a dependencia `react-scripts` e rodar o `yarn start`, alguns warning aparecem e impedem que o projeto seja executado. Cuidado ao tentar atualizar.
-
-Idem para `react-router-dom`

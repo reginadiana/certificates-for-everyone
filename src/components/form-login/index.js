@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import users from '../../services/users.json';
@@ -96,7 +96,7 @@ const FormLogin = () => {
           </Styled.LoginButton>
         </Form.Item>
       </Form>
-      {userAutenticate && <Redirect to="/list-of-events" />}
+      {userAutenticate && <Navigate to="/list-of-events" />}
     </Styled.Container>
   );
 };

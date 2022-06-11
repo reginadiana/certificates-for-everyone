@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import 'antd/dist/antd.css';
 import { Avatar, message, Button, Input, Popconfirm } from 'antd';
 import './style.css';
-import { Redirect } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
 const ProfileCard = ({ organizador, users, assinatura }) => {
   /*Variável que irá renderizar o formulário de registro, mas com 
@@ -147,7 +147,7 @@ const ProfileCard = ({ organizador, users, assinatura }) => {
           <h4 style={{ color: 'red' }}>Sem assinatura</h4>
         )}
       </div>
-      {goToHome && <Redirect to="/"></Redirect>}
+      {goToHome && <Navigate to="/" />}
 
       {toEditForm && (
         <div

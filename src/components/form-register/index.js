@@ -11,7 +11,7 @@ import * as Yup from 'yup';
 import * as Styled from './style';
 import registered_users from '../../services/users.json';
 import { UserContext } from '../../contexts/user-autenticate';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const FormRegister = () => {
   const { setUser } = useContext(UserContext);
@@ -33,7 +33,7 @@ const FormRegister = () => {
   });
 
   const { handleSubmit, values } = formik;
-  const history = useHistory();
+  const history = useNavigate();
 
   const [registeredUsers, setRegisteredUsers] = useState(registered_users);
 
