@@ -1,11 +1,9 @@
-import React, { useState } from "react";
-import jsPDF from "jspdf";
-import html2canvas from "html2canvas";
+import React, { useState } from 'react';
 
 /*Estilos*/
-import "./style.css";
-import "./style-certificate.css";
-import "antd/dist/antd.css";
+import './style.css';
+import './style-certificate.css';
+import 'antd/dist/antd.css';
 import {
   Checkbox,
   Button,
@@ -15,27 +13,27 @@ import {
   Tag,
   Popover,
   Popconfirm,
-} from "antd";
+} from 'antd';
 
-import { UserAddOutlined } from "@ant-design/icons";
+import { UserAddOutlined } from '@ant-design/icons';
 
 /*Animação de tela enquanto o e-mail é enviado*/
-import Spinner from "react-spinkit";
-import "./style-spinkit.css";
+import Spinner from 'react-spinkit';
+import './style-spinkit.css';
 
 /*Importando lista de participantes*/
-import participantesData from "../../services/participantes.json";
+import participantesData from '../../services/participantes.json';
 
-import stars from "../../assets/stars.png";
-import logo from "../../assets/img/logo_texto_preto.png";
+import stars from '../../assets/stars.png';
+import logo from '../../assets/img/logo_texto_preto.png';
 
 const ListOfPresents = ({ evento }) => {
   /*Recebe o evento selecionado pelo organizador*/
   /*Nome do novo participante no input*/
-  const [name, setName] = useState("");
+  const [name, setName] = useState('');
 
   /*E-mail do novo participante no input*/
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState('');
 
   /*JSON dos participantes*/
   const [participantes, setParticipantes] = useState(participantesData);
@@ -47,15 +45,16 @@ const ListOfPresents = ({ evento }) => {
   const [visibleForm, setVisibleForm] = useState(false);
 
   /*Participante selecionado*/
-  const [thisParticipante, setThisParticipante] = useState("");
+  const [thisParticipante, setThisParticipante] = useState('');
 
   /*Variavel que mostrará uma animação enquanto o e-mail é enviado*/
-  const [loadingEmail, setLoadingEmail] = useState(false);
+  // const [loadingEmail, setLoadingEmail] = useState(false);
+  const loadingEmail = false;
 
   /*------- Informações adicionais sobre o evento ------*/
-  let numeroDeParticipantes = 0;
-  let certificadosEvenviados = 0;
-  let participantesConfirmados = 0;
+  // let numeroDeParticipantes = 0;
+  // let certificadosEvenviados = 0;
+  // let participantesConfirmados = 0;
 
   const showModal = (participante) => {
     setVisible(false);
@@ -65,19 +64,17 @@ const ListOfPresents = ({ evento }) => {
   /*Valida os campos de input*/
   const verificarCampos = () => {
     if (!name || !email) {
-      message.error("Por favor, preencha todos os campos");
+      message.error('Por favor, preencha todos os campos');
     } else {
       /*Verificando se o e-mail é valido */
-      if (!email.includes("@") || !email.includes(".")) {
-        message.error("E-mail invalido!");
+      if (!email.includes('@') || !email.includes('.')) {
+        message.error('E-mail invalido!');
       } else {
         /*Verificando se já existe um participante cadastrado*/
         let listEmails = [];
 
-        participantes.map((itemJson) => {
-          if (itemJson.course === evento.course) {
-            listEmails.push(itemJson.email);
-          }
+        participantes.filter((itemJson) => {
+          return itemJson.course === evento.course;
         });
 
         if (!listEmails.includes(email)) {
@@ -94,11 +91,11 @@ const ListOfPresents = ({ evento }) => {
 
           /*Volta para a lista de participntes*/
           setVisibleForm(false);
-          message.success("Participante criado com sucesso");
-          setName("");
-          setEmail("");
+          message.success('Participante criado com sucesso');
+          setName('');
+          setEmail('');
         } else {
-          message.warning("Este participante já está na sua lista");
+          message.warning('Este participante já está na sua lista');
         }
       }
     }
@@ -108,9 +105,7 @@ const ListOfPresents = ({ evento }) => {
   const deleteParticipant = (participantToBeDeleted) => {
     setParticipantes(
       participantes.filter((participante) => {
-        if (participante.name !== participantToBeDeleted) {
-          return participante;
-        }
+        return participante.name !== participantToBeDeleted;
       })
     );
   };
@@ -120,12 +115,12 @@ const ListOfPresents = ({ evento }) => {
     setParticipantes(
       participantes.map((itemParticipante) => {
         if (itemParticipante.name === participante.name) {
-          itemParticipante["present"] = !participante.present;
+          itemParticipante['present'] = !participante.present;
 
           if (participante.present) {
-            message.success("Este participante receberá certificado");
+            message.success('Este participante receberá certificado');
           } else {
-            message.info("Este participante não receberá certificado");
+            message.info('Este participante não receberá certificado');
           }
 
           return itemParticipante;
@@ -141,20 +136,20 @@ const ListOfPresents = ({ evento }) => {
   /*Preenchendo lista de participantes*/
   participantes.map((participante, key) => {
     if (participante.course === evento.course) {
-      let statusCertificate = "";
-      let statusPresense = "";
-      let colorCertificate = "";
-      let colorPresense = "";
+      let statusCertificate = '';
+      let statusPresense = '';
+      let colorCertificate = '';
+      let colorPresense = '';
 
       /*Verifica se o participante recebeu certificado*/
       statusCertificate = participante.receiveCertificate
-        ? "Enviado"
-        : "Não Enviado";
-      colorCertificate = participante.receiveCertificate ? "green" : "orange";
+        ? 'Enviado'
+        : 'Não Enviado';
+      colorCertificate = participante.receiveCertificate ? 'green' : 'orange';
 
       /*Verifica se o participante está confirmado no evento*/
-      statusPresense = participante.present ? "Confirmada" : "Não Confirmado";
-      colorPresense = participante.present ? "green" : "red";
+      statusPresense = participante.present ? 'Confirmada' : 'Não Confirmado';
+      colorPresense = participante.present ? 'green' : 'red';
 
       dataSource.push({
         key: key,
@@ -192,51 +187,52 @@ const ListOfPresents = ({ evento }) => {
             cancelText="Não"
           >
             <Button danger className="button-delete">
-              {" "}
+              {' '}
               X
             </Button>
           </Popconfirm>
         ),
       });
     }
+
+    return null;
   });
 
   const columns = [
     {
-      title: "Atualizar Presença",
-      dataIndex: "checkbox",
-      key: "checkbox",
+      title: 'Atualizar Presença',
+      dataIndex: 'checkbox',
+      key: 'checkbox',
     },
     {
-      title: "Participante",
-      dataIndex: "participante",
-      key: "participante",
+      title: 'Participante',
+      dataIndex: 'participante',
+      key: 'participante',
     },
     {
-      title: "E-mail",
-      dataIndex: "email",
-      key: "email",
+      title: 'E-mail',
+      dataIndex: 'email',
+      key: 'email',
     },
     {
-      title: "Status",
-      dataIndex: "status",
-      key: "status",
+      title: 'Status',
+      dataIndex: 'status',
+      key: 'status',
     },
     {
-      title: "Presença",
-      dataIndex: "presense",
-      key: "presense",
-    },
-    ,
-    {
-      title: "Certificado",
-      dataIndex: "certificado",
-      key: "certificado",
+      title: 'Presença',
+      dataIndex: 'presense',
+      key: 'presense',
     },
     {
-      title: "Excluir da lista",
-      dataIndex: "delete",
-      key: "delete",
+      title: 'Certificado',
+      dataIndex: 'certificado',
+      key: 'certificado',
+    },
+    {
+      title: 'Excluir da lista',
+      dataIndex: 'delete',
+      key: 'delete',
     },
   ];
 
@@ -244,11 +240,11 @@ const ListOfPresents = ({ evento }) => {
     <>
       <div
         className="list-participants"
-        style={{ display: visible ? "grid" : "none" }}
+        style={{ display: visible ? 'grid' : 'none' }}
       >
         <div
           className="input-participantes"
-          style={{ display: visibleForm ? "grid" : "none" }}
+          style={{ display: visibleForm ? 'grid' : 'none' }}
         >
           <h2>Adicione mais participantes a sua lista:</h2>
           <Input
@@ -283,7 +279,7 @@ const ListOfPresents = ({ evento }) => {
           </Button>
         </div>
 
-        <div style={{ display: visibleForm ? "none" : "block" }}>
+        <div style={{ display: visibleForm ? 'none' : 'block' }}>
           <Button
             className="button-add-participant"
             onClick={() => setVisibleForm(true)}
@@ -313,7 +309,7 @@ const ListOfPresents = ({ evento }) => {
           <Table dataSource={dataSource} columns={columns} />
         </div>
       </div>
-      <div style={{ display: visible ? "none" : "grid" }}>
+      <div style={{ display: visible ? 'none' : 'grid' }}>
         {loadingEmail && (
           <div className="overlay-content">
             <Spinner name="ball-grid-pulse" color="white" />
@@ -328,21 +324,21 @@ const ListOfPresents = ({ evento }) => {
           />
           <img src={stars} alt="5 estrelas" className="img-stars" />
           <p className="p-certificate">
-            A comunidade{" "}
+            A comunidade{' '}
             <span className="info-certificate">{evento.company}</span> confere
-            ao participante{" "}
+            ao participante{' '}
             <span className="info-certificate">{thisParticipante.name}</span> o
             presente certificado
             <br />
-            referente a sua participação no evento{" "}
+            referente a sua participação no evento{' '}
             <span className="info-certificate">{evento.course}</span> realizado
             do
             <br />
             dia <span className="info-certificate">
               {evento.startDate}
-            </span> ao{" "}
+            </span> ao{' '}
             <span className="info-certificate">{evento.finishDate}</span>, com
-            carga horaria de{" "}
+            carga horaria de{' '}
             <span className="info-certificate">{evento.workload} horas.</span>
             <br />
           </p>
@@ -360,7 +356,7 @@ const ListOfPresents = ({ evento }) => {
           type="primary"
           onClick={() =>
             message.info(
-              "Infelizmente o backend da nossa aplicação não funciona com Netlify. Por favor rode localmente"
+              'Infelizmente o backend da nossa aplicação não funciona com Netlify. Por favor rode localmente'
             )
           }
         >

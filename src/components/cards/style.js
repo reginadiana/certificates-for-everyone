@@ -1,5 +1,4 @@
-import styled from "styled-components";
-import * as theme from "../../style/theme";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   background-color: rgb(242, 242, 242);
@@ -8,7 +7,7 @@ export const Container = styled.div`
 
 export const Title = styled.h1`
   text-align: center;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 400;
 `;
 

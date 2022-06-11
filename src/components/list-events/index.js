@@ -1,8 +1,8 @@
-import React, { useState, useContext, useRef } from "react";
-import { UserContext } from "../../contexts/user-autenticate";
+import React, { useState, useContext, useRef } from 'react';
+import { UserContext } from '../../contexts/user-autenticate';
 
 /*Estilos*/
-import "antd/dist/antd.css";
+import 'antd/dist/antd.css';
 import {
   Button,
   Form,
@@ -15,7 +15,7 @@ import {
   Empty,
   InputNumber,
   Popconfirm,
-} from "antd";
+} from 'antd';
 
 import {
   HeartOutlined,
@@ -24,7 +24,7 @@ import {
   CloseOutlined,
   UsergroupAddOutlined,
   UserOutlined,
-} from "@ant-design/icons";
+} from '@ant-design/icons';
 
 // import "./styles.css";
 // import "./styles-events.css";
@@ -32,16 +32,16 @@ import {
 // import "./style-digital-assinature.css";
 
 /*Importando os dados do evento*/
-import eventosData from "../../services/events.json";
+import eventosData from '../../services/events.json';
 
 /*Componentes*/
-import ProfileCard from "../../components/profile-card/index";
-import ListOfPresents from "../../components/list-presents/index";
-import InfoEvent from "../../components/info-event/index";
+import ProfileCard from '../../components/profile-card/index';
+import ListOfPresents from '../../components/list-presents/index';
+import InfoEvent from '../../components/info-event/index';
 
 /*Assinatura digital*/
-import SignaturePad from "react-signature-canvas";
-import Popup from "reactjs-popup";
+import SignaturePad from 'react-signature-canvas';
+import Popup from 'reactjs-popup';
 
 const ListEvents = ({ organizador, users }) => {
   const { user } = useContext(UserContext);
@@ -57,21 +57,21 @@ const ListEvents = ({ organizador, users }) => {
   const [toSeeEvents, setSeeEvents] = useState(false);
 
   /*Esta variavel guarda o evento referente quando o botão check participantes for acionado*/
-  const [eventChecked, setEventChecked] = useState("");
+  const [eventChecked, setEventChecked] = useState('');
 
   /*JSON dos eventos*/
   const [eventos, setEventos] = useState(eventosData);
 
   /*Vaiável para saber qual evento foi editado*/
-  const [eventEdited, setEventEdited] = useState("");
+  const [eventEdited, setEventEdited] = useState('');
 
   //Dados do evento:
   //Serão usados para editar no formulário
-  const [company, setCompany] = useState("");
-  const [course, setCourse] = useState("");
-  const [startDate, setStartDate] = useState("");
-  const [finishDate, setFinishDate] = useState("");
-  const [workload, setWorkload] = useState("");
+  const [company, setCompany] = useState('');
+  const [course, setCourse] = useState('');
+  const [startDate, setStartDate] = useState('');
+  const [finishDate, setFinishDate] = useState('');
+  const [workload, setWorkload] = useState('');
 
   /*---------- Assinatura Digital ----------*/
   const [imageURL, setImageURL] = useState(null);
@@ -81,7 +81,7 @@ const ListEvents = ({ organizador, users }) => {
   const clear = () => sigCanvas.current.clear();
 
   const save = () => {
-    setImageURL(sigCanvas.current.getTrimmedCanvas().toDataURL("image/png"));
+    setImageURL(sigCanvas.current.getTrimmedCanvas().toDataURL('image/png'));
   };
 
   /*--------- Formulário para criar evento ---------*/
@@ -121,9 +121,9 @@ const ListEvents = ({ organizador, users }) => {
   const rangeConfig = {
     rules: [
       {
-        type: "array",
+        type: 'array',
         required: true,
-        message: "Este campo é obrigatório!",
+        message: 'Este campo é obrigatório!',
       },
     ],
   };
@@ -133,7 +133,7 @@ const ListEvents = ({ organizador, users }) => {
     rules: [
       {
         required: true,
-        message: "Por favor, preencha esse campo",
+        message: 'Por favor, preencha esse campo',
       },
     ],
   };
@@ -142,10 +142,10 @@ const ListEvents = ({ organizador, users }) => {
   /*Ela não é chamada caso os campos não forem preeenchidos*/
   const onFinish = (fieldsValue) => {
     /*Dados do calendário*/
-    const rangeValue = fieldsValue["range-picker"];
+    const rangeValue = fieldsValue['range-picker'];
 
     if (imageURL === null) {
-      message.error("Por favor, escreva sua assinatura digital");
+      message.error('Por favor, escreva sua assinatura digital');
     } else {
       setEventos([
         ...eventos,
@@ -153,15 +153,15 @@ const ListEvents = ({ organizador, users }) => {
           user: organizador,
           company: fieldsValue.company,
           course: fieldsValue.course,
-          startDate: rangeValue[0].format("DD-MM-YYYY"),
-          finishDate: rangeValue[1].format("DD-MM-YYYY"),
+          startDate: rangeValue[0].format('DD-MM-YYYY'),
+          finishDate: rangeValue[1].format('DD-MM-YYYY'),
           workload: fieldsValue.workload,
-          logo: "https://miro.medium.com/max/478/1*jriufqYKgJTW4DKrBizU5w.png",
+          logo: 'https://miro.medium.com/max/478/1*jriufqYKgJTW4DKrBizU5w.png',
           digitalSignature: imageURL,
         },
       ]);
 
-      message.success("Evento criado com sucesso");
+      message.success('Evento criado com sucesso');
 
       /*Retira o componente do formulário de eventos e volta para a lista*/
       setToCreateFormEvent(false);
@@ -172,10 +172,8 @@ const ListEvents = ({ organizador, users }) => {
 
   let eventsOfOrganizer = [];
 
-  eventos.map((evento) => {
-    if (evento.user === organizador) {
-      eventsOfOrganizer.push(evento);
-    }
+  eventsOfOrganizer = eventos.filter((evento) => {
+    return evento.user === organizador;
   });
 
   /*Verifica se existem eventos cadastrados para mostrar elemento do Antd 'No Data'*/
@@ -183,13 +181,11 @@ const ListEvents = ({ organizador, users }) => {
 
   /* ------------- Deletando Eventos ---------------*/
   const deleteEvent = (eventToBeDeleted) => {
-    message.success("O evento foi excluido");
+    message.success('O evento foi excluido');
 
     setEventos(
       eventsOfOrganizer.filter((evento) => {
-        if (evento.course !== eventToBeDeleted) {
-          return evento;
-        }
+        return evento.course !== eventToBeDeleted;
       })
     );
   };
@@ -204,7 +200,7 @@ const ListEvents = ({ organizador, users }) => {
       !workload ||
       !imageURL
     ) {
-      message.error("Por favor, não deixe seus dados vazios.");
+      message.error('Por favor, não deixe seus dados vazios.');
       //quando o formulário aparece na tela, essa mensagem aparece, caso o campo não tenha sido preenchido.
     } else {
       setToEditFormEvent(!toEditFormEvent);
@@ -223,7 +219,7 @@ const ListEvents = ({ organizador, users }) => {
       !workload ||
       !imageURL
     ) {
-      message.error("Por favor, preencha todos os campos do formulário.");
+      message.error('Por favor, preencha todos os campos do formulário.');
       //quando o formulário aparece na tela, essa mensagem aparece, caso o campo não tenha sido preenchido.
     } else {
       /*Atualizando o evento do organizador*/
@@ -231,12 +227,12 @@ const ListEvents = ({ organizador, users }) => {
         eventsOfOrganizer.map((evento) => {
           /*Mudando somente o evento requerido*/
           if (eventEdited === evento.course) {
-            evento["company"] = company;
-            evento["course"] = course;
-            evento["startDate"] = startDate;
-            evento["finishDate"] = finishDate;
-            evento["workload"] = workload;
-            evento["digitalSignature"] = imageURL;
+            evento['company'] = company;
+            evento['course'] = course;
+            evento['startDate'] = startDate;
+            evento['finishDate'] = finishDate;
+            evento['workload'] = workload;
+            evento['digitalSignature'] = imageURL;
 
             return evento;
           } else {
@@ -245,7 +241,7 @@ const ListEvents = ({ organizador, users }) => {
         })
       );
 
-      message.success("Os dados do evento foram atualizados com sucesso!");
+      message.success('Os dados do evento foram atualizados com sucesso!');
 
       /*Voltando para a lista de eventos*/
       //setToEditFormEvent(!toEditFormEvent)
@@ -288,7 +284,7 @@ const ListEvents = ({ organizador, users }) => {
             toProfile ||
             toList ||
             toSeeEvents
-              ? "none"
+              ? 'none'
               : null,
         }}
       >
@@ -322,7 +318,7 @@ const ListEvents = ({ organizador, users }) => {
                     <>
                       <Popover content={<h5>Ver mais info. do evento</h5>}>
                         <Button
-                          style={{ borderColor: "transparent" }}
+                          style={{ borderColor: 'transparent' }}
                           onClick={() => seeEvents(eventoJson)}
                         >
                           <HeartOutlined key="edit" />
@@ -331,7 +327,7 @@ const ListEvents = ({ organizador, users }) => {
 
                       <Popover content={<h5>Editar evento</h5>}>
                         <Button
-                          style={{ borderColor: "transparent" }}
+                          style={{ borderColor: 'transparent' }}
                           onClick={() => clickEditFormEvent(eventoJson)}
                         >
                           <FormOutlined key="edit" />
@@ -340,7 +336,7 @@ const ListEvents = ({ organizador, users }) => {
 
                       <Popover content={<h5>Participantes</h5>}>
                         <Button
-                          style={{ borderColor: "transparent" }}
+                          style={{ borderColor: 'transparent' }}
                           onClick={() => saveEventToList(eventoJson)}
                         >
                           <TeamOutlined key="ellipsis" />
@@ -353,7 +349,7 @@ const ListEvents = ({ organizador, users }) => {
                         okText="Sim"
                         cancelText="Não"
                       >
-                        <Button style={{ borderColor: "transparent" }}>
+                        <Button style={{ borderColor: 'transparent' }}>
                           <CloseOutlined key="edit" />
                         </Button>
                       </Popconfirm>
@@ -365,15 +361,15 @@ const ListEvents = ({ organizador, users }) => {
                       <Avatar src="https://cdn-images-1.medium.com/max/1200/1*B8rGvo7fJ7qL4uFJ_II_-w.png" />
                     }
                     title={
-                      <h4 style={{ color: "#C6255A" }}>{eventoJson.course}</h4>
+                      <h4 style={{ color: '#C6255A' }}>{eventoJson.course}</h4>
                     }
                     description={
                       <>
-                        <h5 style={{ fontSize: "12px" }}>
+                        <h5 style={{ fontSize: '12px' }}>
                           Inicio: &nbsp;{eventoJson.startDate}
                         </h5>
 
-                        <h5 style={{ fontSize: "12px" }}>
+                        <h5 style={{ fontSize: '12px' }}>
                           Encerramento: &nbsp;{eventoJson.finishDate}
                         </h5>
                       </>
@@ -382,8 +378,10 @@ const ListEvents = ({ organizador, users }) => {
                 </Card>
               );
             }
+
+            return null;
           })}
-          {noEvents && <Empty style={{ marginTop: "5%" }} />}
+          {noEvents && <Empty style={{ marginTop: '5%' }} />}
         </div>
       </div>
       {toEditFormEvent && (
@@ -392,7 +390,7 @@ const ListEvents = ({ organizador, users }) => {
         //quando eu troco o nome do course (Evento), altera o nome dos 3 eventos que estão sendo mostrados na tela
         <div
           className="edit-event"
-          style={{ display: toEditFormEvent ? "block" : "none" }}
+          style={{ display: toEditFormEvent ? 'block' : 'none' }}
         >
           <h2 className="edit-event-title">Edite os dados do seu evento:</h2>
           <h4>Comunidade:</h4>
@@ -450,7 +448,7 @@ const ListEvents = ({ organizador, users }) => {
                   <SignaturePad
                     ref={sigCanvas}
                     canvasProps={{
-                      className: "signatureCanvas",
+                      className: 'signatureCanvas',
                     }}
                   />
                   <Button onClick={save} className="button-save">
@@ -553,7 +551,7 @@ const ListEvents = ({ organizador, users }) => {
                         <SignaturePad
                           ref={sigCanvas}
                           canvasProps={{
-                            className: "signatureCanvas",
+                            className: 'signatureCanvas',
                           }}
                         />
                         <Button onClick={save} className="button-save">
@@ -575,7 +573,7 @@ const ListEvents = ({ organizador, users }) => {
                       className="buttons-pad"
                     />
                   ) : (
-                    <h4 style={{ color: "red" }}>Sem assinatura</h4>
+                    <h4 style={{ color: 'red' }}>Sem assinatura</h4>
                   )}
                 </div>
               </div>
@@ -623,7 +621,7 @@ const ListEvents = ({ organizador, users }) => {
           <Button
             onClick={() => setList(false)}
             className="button-back-from-list"
-            style={{ marginButtom: "-20%" }}
+            style={{ marginButtom: '-20%' }}
           >
             Voltar para a lista de Eventos
           </Button>

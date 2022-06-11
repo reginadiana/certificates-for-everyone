@@ -1,10 +1,7 @@
-import React from "react";
-import Header from "../../components/header/index";
-import Section from "../../components/section/index";
-import Cards from "../../components/cards/index";
-import ModelCertificateHome from "../../components/model-certificate-home/index";
-import Steps from "../../components/steps/index";
-import Footer from "../../components/footer/index";
+import React from 'react';
+import Header from '../../components/header/index';
+import Section from '../../components/section/index';
+import Footer from '../../components/footer/index';
 
 const Home = () => (
   <>

@@ -1,6 +1,5 @@
-import styled from "styled-components";
-import * as theme from "../../style/theme";
-import { Field, Form } from "formik";
+import styled from 'styled-components';
+import { Field, Form } from 'formik';
 
 export const Container = styled.div`
   //width: 70%;
