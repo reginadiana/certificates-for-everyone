@@ -1,12 +1,11 @@
-import styled from "styled-components";
-import * as theme from "../../style/theme";
+import styled from 'styled-components';
 
 export const Container = styled.div``;
 
 export const Title = styled.h4`
   margin-left: 3%;
   margin-top: 3%;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   padding-top: 3%;
 `;
 

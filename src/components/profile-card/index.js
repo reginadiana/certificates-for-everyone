@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import "antd/dist/antd.css";
-import { Avatar, message, Button, Input, Popconfirm } from "antd";
-import "./style.css";
-import { Redirect } from "react-router-dom";
+import React, { useState } from 'react';
+import 'antd/dist/antd.css';
+import { Avatar, message, Button, Input, Popconfirm } from 'antd';
+import './style.css';
+import { Redirect } from 'react-router-dom';
 
 const ProfileCard = ({ organizador, users, assinatura }) => {
   /*Variável que irá renderizar o formulário de registro, mas com 
@@ -17,12 +17,12 @@ const ProfileCard = ({ organizador, users, assinatura }) => {
   const [goToHome, setGoHome] = useState(false);
 
   /*Recuperando os dados do usuário logado para inserir como valor inicial nos inputs*/
-  let nameProfile = "";
-  let emailProfile = "";
-  let passwordProfile = "";
-  let avatarProfile = "";
+  let nameProfile = '';
+  let emailProfile = '';
+  let passwordProfile = '';
+  let avatarProfile = '';
 
-  user.map((itemJson) => {
+  user.forEach((itemJson) => {
     if (itemJson.token) {
       nameProfile = itemJson.name;
       emailProfile = itemJson.email;
@@ -48,7 +48,7 @@ const ProfileCard = ({ organizador, users, assinatura }) => {
     event.preventDefault();
 
     if (!name || !email || !password) {
-      message.error("Os dados não podem ficar vázios");
+      message.error('Os dados não podem ficar vázios');
     } else {
       setToEditForm(!toEditForm);
 
@@ -57,9 +57,9 @@ const ProfileCard = ({ organizador, users, assinatura }) => {
         user.map((itemJson) => {
           /*Atualizando o JSON de usuários sem o usuário ativo*/
           if (itemJson.name === organizador) {
-            itemJson["name"] = name;
-            itemJson["email"] = email;
-            itemJson["password"] = password;
+            itemJson['name'] = name;
+            itemJson['email'] = email;
+            itemJson['password'] = password;
 
             return itemJson;
           } else {
@@ -68,7 +68,7 @@ const ProfileCard = ({ organizador, users, assinatura }) => {
         })
       );
 
-      message.success("Seus dados foram atualizados");
+      message.success('Seus dados foram atualizados');
     }
   };
 
@@ -79,11 +79,11 @@ const ProfileCard = ({ organizador, users, assinatura }) => {
       user.map((itemJson) => {
         /*Atualizando o JSON de usuários sem o usuário ativo*/
         if (itemJson.token) {
-          itemJson["name"] = "";
-          itemJson["email"] = "";
-          itemJson["password"] = "";
-          itemJson["token"] = false;
-          itemJson["avatar"] = "";
+          itemJson['name'] = '';
+          itemJson['email'] = '';
+          itemJson['password'] = '';
+          itemJson['token'] = false;
+          itemJson['avatar'] = '';
 
           return itemJson;
         } else {
@@ -93,7 +93,7 @@ const ProfileCard = ({ organizador, users, assinatura }) => {
     );
     console.log(user);
 
-    message.info("Sua conta foi desabilitada");
+    message.info('Sua conta foi desabilitada');
 
     /*Redirecionar para a Home*/
     setGoHome(true);
@@ -102,7 +102,7 @@ const ProfileCard = ({ organizador, users, assinatura }) => {
     <>
       <div
         className="profile"
-        style={{ display: toEditForm ? "none" : "block" }}
+        style={{ display: toEditForm ? 'none' : 'block' }}
       >
         <Avatar size="large" src={avatarProfile} />
 
@@ -116,6 +116,8 @@ const ProfileCard = ({ organizador, users, assinatura }) => {
               </>
             );
           }
+
+          return null;
         })}
 
         <Button type="primary" primary onClick={beforeEditForm}>
@@ -131,18 +133,18 @@ const ProfileCard = ({ organizador, users, assinatura }) => {
             Deletar minha conta
           </Button>
         </Popconfirm>
-        <h4 style={{ marginTop: "3%" }}>Sua assinatura</h4>
-        <hr style={{ marginLeft: "0%" }} />
+        <h4 style={{ marginTop: '3%' }}>Sua assinatura</h4>
+        <hr style={{ marginLeft: '0%' }} />
         <br />
         {assinatura ? (
           <img
             src={assinatura}
             alt="Minha assinatura Digital"
             className="buttons-pad"
-            style={{ marginLeft: "-3%" }}
+            style={{ marginLeft: '-3%' }}
           />
         ) : (
-          <h4 style={{ color: "red" }}>Sem assinatura</h4>
+          <h4 style={{ color: 'red' }}>Sem assinatura</h4>
         )}
       </div>
       {goToHome && <Redirect to="/"></Redirect>}
@@ -150,7 +152,7 @@ const ProfileCard = ({ organizador, users, assinatura }) => {
       {toEditForm && (
         <div
           className="edit-profile"
-          style={{ display: toEditForm ? "block" : "none" }}
+          style={{ display: toEditForm ? 'block' : 'none' }}
         >
           <h2 className="profile-title">Edite os dados da sua conta:</h2>
           <h4>Nome:</h4>

@@ -1,5 +1,4 @@
-import styled from "styled-components";
-import * as theme from "../../style/theme";
+import styled from 'styled-components';
 
 export const UpInfo = styled.div`
   background-repeat: no-repeat;
