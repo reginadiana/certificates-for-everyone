@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from 'antd';
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.min.css';
 import './style.js';
 import * as Styled from './style';
 

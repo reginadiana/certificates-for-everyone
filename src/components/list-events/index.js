@@ -2,7 +2,7 @@ import React, { useState, useContext, useRef } from 'react';
 import { UserContext } from '../../contexts/user-autenticate';
 
 /*Estilos*/
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.min.css';
 import {
   Button,
   Form,

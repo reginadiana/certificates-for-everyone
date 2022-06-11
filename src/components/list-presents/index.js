@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 /*Estilos*/
 import './style.css';
 import './style-certificate.css';
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.min.css';
 import {
   Checkbox,
   Button,

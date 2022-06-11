@@ -173,7 +173,3 @@ Permite visualizar uma animação enquanto o usuário espera o e-mail ser enviad
 <img src="https://user-images.githubusercontent.com/46378210/82743777-49d21e00-9d46-11ea-9221-3d035cfd8c1b.png" width="115">
 
 ---
-
-**Warnings:**
-
-Ao atualizar a dependencia `react-scripts` e rodar o `yarn start`, alguns warning aparecem e impedem que o projeto seja executado. Cuidado ao tentar atualizar.

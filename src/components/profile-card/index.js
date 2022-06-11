@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.min.css';
 import { Avatar, message, Button, Input, Popconfirm } from 'antd';
 import './style.css';
 import { Navigate } from 'react-router-dom';
