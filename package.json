@@ -9,7 +9,6 @@
     "formik": "^2.2.9",
     "html2canvas": "^1.4.1",
     "jspdf": "^2.5.1",
-    "netlify-cli": "^10.5.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-google-login": "^5.2.2",
